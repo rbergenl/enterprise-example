@@ -18,7 +18,7 @@ Bigger corporations are making a move to the cloud
   - Custom: popular are Ansible and Terraform
 - run their applications inside a container
   - Docker (configured by a Dockerfile)
-- collect all loggin and monitoring data into a Splunk dashboard
+- collect all logging and monitoring data into a Splunk dashboard
 
 ## Application
 Bigger corporations
@@ -27,12 +27,29 @@ Bigger corporations
 - are building more and more microservices with NodeJs
 - are even going serverless with functions/lambdas
 
+## Marketing
+Bigger corporations use lots of different marketing platforms
+- A Tag Management System to manage all tool implementations (google tag manager, tealium)
+- A Cookie Consent (custom script)
+- Analytics (google analytics, facebook pixel)
+- A/B Testing (optimizely, visualwebsiteoptimizer)
+- Personalisation (blueconic, relay42)
+- Retargeting (doubleclick)
+- Feedback (usabilla)
+- Chat ()
+
+Each platform should have
+- An owner (who pays the bill and assigns administrators)
+- Administrators (who assign users and perform audits on implementations, configuration and compliance)
+- Users (who actually uses the platform and maintain their specific implementations)
+
 # Teams
 Bigger corporations tend to have:
-- Centralised teams which set standards and share their code:
-  - A team which set styling standards and creates a styleguide
-  - A team which creates shared code for pipelines to be used by individual teams
-  - A team which creates shared components, either for Angular or React apps
+- Centralised teams which set standards, share their code and manage platforms:
+  - A team responsible for styling standards, creating a styleguide and reusable code
+  - A team responsible for pipeline standards and creating reusable code for to be used by individual teams
+  - A team responsible for creating shared components, either for Angular or React apps
+  - A team responsible for
 - A team responsible for a backend microservice or app, mostly a Java application or NodeJs
 - A team responsible for a web application or widget, written with either Angular or React (initialised via CLI)
 - A team responsible for the website and building and running their own frontend

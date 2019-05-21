@@ -1,0 +1,10 @@
+{
+  "id": 12345,
+  "interactions":[
+    { "name": "logged in" },
+    { "name": "logged out" }
+  ],
+  "segments": [
+    { "name": "GROUP_INTERESTED_IN_THIS" }
+  ]
+}
