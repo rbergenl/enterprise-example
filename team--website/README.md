@@ -18,6 +18,20 @@ $ npm start
 ```
 
 ## Folder Structure
+.
+├── dist*                   # Dist folder to be published
+├── infra                   # CloudFormation templates to create an infrastructure stack on AWS
+├── src                     
+|   ├── components          # Javascript components
+|   └── themes              # Sass files
+├── test                    
+│   ├── e2e                 # End-to-end tests
+│   └── unit                # Unit tests
+├── .editorconfig
+├── Jenkinsfile
+└── README.md
+
+> Folders with an * are not source code but contains generated files
 
 ## Best Practices
 - Install plugins for your IDE to support `.editorconfig` and `eslint`.
