@@ -42,4 +42,4 @@ $ npm start
 - Implement a `dataLayer` to be consumed by analytics
 
 ## Contributing
-- Read the `CONTRIBUTING.md` file for the guidelines
+- Read the [`CONTRIBUTING.md`]('./CONTRIBUTING.md') file for the guidelines
