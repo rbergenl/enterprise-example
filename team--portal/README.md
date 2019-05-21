@@ -1,4 +1,4 @@
-Team Website Vanilla
+Team Portal
 ---
 
 This project is initialised using: `$ npm init --yes`

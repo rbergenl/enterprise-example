@@ -1,4 +1,4 @@
-Team Shared Styling
+Team Styling
 ---
 
 # Getting Started

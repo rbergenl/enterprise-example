@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <title>Personalisation Example</title>
+</head>
+<body>
+  <div id="proposition">
+    <p>Default text</p>
+  </div>
+  <script id="response" type="application/json">
+    {
+      "id": 12345,
+      "interactions":[
+        { "name": "logged in" },
+        { "name": "logged out" }
+      ],
+      "segments": [
+        { "name": "GROUP_INTERESTED_IN_THIS" }
+      ]
+    }
+  </script>
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function(){
+      fetch('/targetingplatform')
+        .then(res => res.json())
+        .then()
+    });
+  </script>
+</body>
+</html>
