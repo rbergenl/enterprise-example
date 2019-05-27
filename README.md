@@ -38,18 +38,13 @@ Bigger corporations use lots of different marketing platforms
 - Feedback (usabilla)
 - Chat ()
 
-Each platform should have
-- An owner (who pays the bill and assigns administrators)
-- Administrators (who assign users and perform audits on implementations, configuration and compliance)
-- Users (who actually uses the platform and maintain their specific implementations)
-
 # Teams
 Bigger corporations tend to have:
 - Centralised teams which set standards, share their code and manage platforms:
   - A team responsible for styling standards, creating a styleguide and reusable code
   - A team responsible for pipeline standards and creating reusable code for to be used by individual teams
   - A team responsible for creating shared components, either for Angular, React or Vue apps
-  - A team responsible for
+  - A team responsible for marketing, which includes analytics, personalisation, a/b testing, etc.
 - A team responsible for a backend microservice or app, mostly a Java application or NodeJs
 - A team responsible for a web application or widget, written with either Angular, React or Vue (initialised via CLI)
 - A team responsible for the website which share the same header and footer with a portal team

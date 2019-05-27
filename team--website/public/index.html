@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <title>Title</title>
-  <meta name="description" content="description" />
+  <title>Title</title><!-- lighthouse: seo -->
+  <meta name="description" content="description" /><!-- lighthouse: seo -->
   <script>dataLayer = [];</script>
-  <script src="tagmanager.js"></script>
+  <script async src="tagmanager.js"></script>
   <style type="text/css">/* minified initial css */</style>
-  <link rel="prefetch" href="bundle.js" />
+  <link rel="prefetch" href="bundle.js" /> <!-- lighthouse: performance -->
+  <link rel="manifest.json" /><!-- lighthouse: pwa -->
 </head>
 <body>
-  <header>
+  <header><!-- should be loaded server side, from a shared location -->
     <nav></nav>
   </header>
   <main>
     <section class="loading-skeleton"></section>
   </main>
-  <footer>
+  <footer><!-- should be loaded server side, from a shared location -->
     <nav></nav>
   </footer>
   <script async src="bundle.js"></script>
+  <script src="serviceworker.js"></script><!-- lighthouse: pwa -->
 </body>
 </html>
