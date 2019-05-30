@@ -13,6 +13,7 @@ Team Pipeline
 
   .
   ├── infra                   # CloudFormation templates to create an infrastructure stack on AWS
+  ├── references              # Contains example files to be used as a jump start for teams
   └── var                     # Groovy files with commands for each step in a pipeline
 
 > Folders with an * are not source code but contains generated files

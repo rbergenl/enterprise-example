@@ -49,3 +49,41 @@ Bigger corporations tend to have:
 - A team responsible for a web application or widget, written with either Angular, React or Vue (initialised via CLI)
 - A team responsible for the website which share the same header and footer with a portal team
 - A team responsible for a portal for which a user should be authenticated
+
+> Channels on the web contain widgets which call services.
+> Channels and widgets are styled using definitions in the styleguide.
+> Widgets are composed of components from a shared library.
+> Platforms deliver content and marketing tools used in different channels.
+> Application and widgets are integrated and deployed using shared building blocks for pipelines.
+
+# Channels
+The Channels are the interaction points with the customer. The channels are
+split over the domain of the organisation via different subdomains and paths.
+- Portal Application (jam-stack - nodejs)
+- Website Application (java)
+- Native Application (react-native)
+
+# Widgets
+Widgets are client side applications placed on pages in different channels to provide a UI for interaction with the customer and business services.
+- UserRegistration (angular)
+- UserLogin (react)
+- UserPreferences (vue)
+
+# Services
+Services are independent API's which perform actions like storage, retrieval or mutations on data from business systems.
+- RegisterUser
+- AuthenticateUser (nodejs)
+- Preferences (java)
+
+# Platforms
+Platforms are tools used by the Business to manage their content and digital marketing activities.
+- Content (management of pages, video, images and search (and widgets?))
+- Marketing (management of tags for analytics, a/b testing, etc.)
+
+# Libraries
+The Libraries are shared code, like UI components to be used by widgets, CI/CD building
+blocks to be used by all source code repositories. And Styleguide definitions to be used
+for channels, widgets and UI components.
+- UI Components Library to be used by and build with the widgets
+- CI/CD Building Blocks to be used by the channels, libraries, services,  and widget
+- Styleguide definitions (markup and styling) to be used by the channels, libraries and widgets
