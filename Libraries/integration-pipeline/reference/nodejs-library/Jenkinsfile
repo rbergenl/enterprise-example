@@ -1,7 +1,0 @@
-# scm checkout
-# npm version [major|minor|patch]
-# npm install
-# npm test
-# npm build
-# npm publish to nexus registry - end
-# git release (git tag, git add, git commit, git push origin master)

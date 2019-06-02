@@ -1,0 +1,5 @@
+# Configure the Jenkins Runner
+
+# Load the needed plugins
+
+# Load the needed libraries (the own custom library which describes each step)

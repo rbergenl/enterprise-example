@@ -1,0 +1,8 @@
+
+# Continuous Integration
+
+
+# docker build .
+# docker tag
+# docker push
+# aws s3 upload (this event is the trigger of the deployment pipeline)

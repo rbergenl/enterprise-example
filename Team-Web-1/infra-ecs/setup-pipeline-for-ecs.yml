@@ -1,0 +1,2 @@
+# Only needed on AWS Dev account. This pipelines assumes Roles to deploy to AWS Test and AWS Prod account.
+# If the deployment is from the Master branch, then continue until Production.

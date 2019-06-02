@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <title>Title</title><!-- lighthouse: seo -->
+  <meta name="description" content="description" /><!-- lighthouse: seo -->
+  <script type="application/ld+json">/* search console */
+      {
+          "@context": "https://schema.org/",
+          "@type": "WebSite",
+          "url": "https://example.com/thispage",
+          "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://example.com"
+          },
+          "description": "description"
+      }
+  </script>
+  <script>dataLayer = [];</script>
+  <script async src="tagmanager.js"></script>
+  <style type="text/css">/* minified initial css */</style>
+  <link rel="prefetch" href="bundle.js" /> <!-- lighthouse: performance -->
+  <link rel="manifest.json" /><!-- lighthouse: pwa -->
+</head>
+<body>
+  <noscript><!-- load css for when javascript is not enabled --></noscript>
+  <header><!-- should be loaded server side, from a shared location -->
+    <nav></nav>
+  </header>
+  <main>
+    <section class="loading-skeleton"><!-- placeholder for content to be inserted --></section>
+  </main>
+  <footer><!-- should be loaded server side, from a shared location -->
+    <nav></nav>
+  </footer>
+  <script async src="bundle.js"></script><!-- minified initial javascript; rest is lazy loaded -->
+  <script src="serviceworker.js"></script><!-- lighthouse: pwa; to cache the appshell and offline page -->
+</body>
+</html>

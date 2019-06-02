@@ -1,0 +1,8 @@
+Used: https://hub.docker.com/r/sonatype/docker-nexus3/
+
+docker run -d -p 8081:8081 -p 8082:8082 --name nexus sonatype/docker-nexus3
+> go to localhost:8081, login with admin/admin123 and create docker hosted repo with connector port 8082
+> set docker insecure repo localhost:8082
+docker login -u admin -p admin123 localhost:8082
+docker tag <image> localhost:8082/name
+docker push localhost:8082/name

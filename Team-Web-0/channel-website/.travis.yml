@@ -1,0 +1,5 @@
+# Free CI tool which has a webhook to listen for "git push" event and then starts the Jenkins runner
+language: minimal
+services:
+- docker
+script: docker run -v /var/run/docker.sock:/var/run/docker.sock -v ${PWD}:/workspace -v /tmp -e CASC_JENKINS_CONFIG=/workspace/jenkins.yml -e CF_PW -e ERP_PW -e BRANCH_NAME=$TRAVIS_BRANCH ppiper/jenkinsfile-runner

@@ -87,3 +87,9 @@ for channels, widgets and UI components.
 - UI Components Library to be used by and build with the widgets
 - CI/CD Building Blocks to be used by the channels, libraries, services,  and widget
 - Styleguide definitions (markup and styling) to be used by the channels, libraries and widgets
+
+
+# Team Web 0
+Responsible for hosting a channel, the Website. The website is hosted as a container.
+It uses widgets, these files are hosted in a CDN. Widgets might interact with a backend service.
+The team as DevOps is responsible for building the channel, and also for maintaining the infrastructure.
