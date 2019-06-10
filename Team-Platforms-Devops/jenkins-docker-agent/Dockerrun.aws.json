@@ -1,0 +1,24 @@
+{
+    "AWSEBDockerrunVersion": "1",
+    "Logging": "/app/log",
+      "Ports": [
+      {
+        "ContainerPort": 8080,
+        "HostPort": 8080
+      },
+      {
+        "ContainerPort": 50000,
+        "HostPort": 50000
+      }
+    ],
+    "Volumes": [
+        {
+            "HostDirectory": "/var/run",
+            "ContainerDirectory": "/var/run"
+        }
+    ],
+    "Image": {
+      "Name": "219009929765.dkr.ecr.us-east-1.amazonaws.com/jenkins:latest",
+      "Update": "true"
+    }
+}

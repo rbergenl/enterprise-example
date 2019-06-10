@@ -41,12 +41,12 @@ $ npm start
 ## Best Practices
 ### Get instant feedback during development
 - Install plugins for your IDE to support `.editorconfig`,  `eslint` for javascript and ` cfn-lint` for cloudformation templates and `prettier` (or beautifier for html and javascript).
-- Install `npm install npm-check --save-dev` and add script `"upgrade-interactive": "npm-check --update"` to interactively update the dependencies (to prevent security issues)
 ### Get feedback after each committed change
 - Setup a minimum pipeline which runs unit tests on every git push in feature branches.
 - Unit Tests coverage should be above 80%
 - Do implement SonarQube as well for static code analysis, improving code quality and security.
 ### Keep a stable build
+- Use the default `npm outdated`, `npm update` and `npm audit` commands to update the dependencies and prevent security issues (use ` --depth 9999` to perform the command on deeper dependency tree). Might first need to remove the current `rm -r ./node_modules package-lock.json`. Also use `npm ls <package>` to see the current state for that package.
 ### Deliver an optimised product
 - Run a Lighthouse Audit and make sure all factors are in green (add PWA and performance best practices)
 ### Use standards for consistency

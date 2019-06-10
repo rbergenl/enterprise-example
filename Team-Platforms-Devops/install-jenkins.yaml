@@ -1,2 +1,39 @@
+# Used: https://github.com/jenkinsci/docker/blob/master/README.md
+# https://medium.com/@manav503/how-to-build-docker-images-inside-a-jenkins-container-d59944102f30
+# Used: https://docs.aws.amazon.com/whitepapers/latest/jenkins-on-aws/containerized-deployment.html
 
-docker run -d -p 8080:8080 --name jenkins jenkins/jenkins:lts
+- Prefered way is: build a Dockerfile with
+```
+FROM jenkins/jenkins:lts
+RUN /usr/local/bin/install-plugins.sh docker-slaves pipeline-aws
+```
+- Add the commands to Dockerfile as described here: https://docs.docker.com/install/linux/docker-ce/debian/
+- And run `docker image build -t jenkins-docker .`
+- To start run `docker container run -d -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock --name jenkins-docker jenkins-docker`
+- To get the initialAdminPassword use `docker exec -it -u root jenkins-docker bash`
+- Use `lsb_release -a` to check which version of Docker you need from https://download.docker.com/
+- After plugin installations and user creation restart with `docker restart jenkins`
+
+# Configuration (might not me needed)
+- After install do `Manage Jenkins` add 'Global Tool Configuration' > Docker.
+- And via 'Manage Nodes' give the Master the label 'docker'.
+
+# Add Repo to Jenkins
+- First add credentials: ` ssh-keygen -t rsa`
+- The `cat ~/.ssh/id_rsa.pub` to the Github repository > settings > SSh keys.
+- The `cat ~/.ssh/id_rsa` to Jenkins > credentials > add > SSH key.
+- Create new Item > Multibranch
+- Add new source `git` with the correct credentials and the `ssh` clone URL.
+
+# Install on Elastic Beanstalk
+- First push the Docker Image (from Dockerfile) to ECR
+- Then 'Using Images from an Amazon ECR Repository': https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker.container.console.html
+  - Add RegistryReadOnly policy to "security profile" of EC2.
+  - Add Policy to ECR, for EC2 Role to read.
+- Create Elastic Beanstalk, and upload the Dockerrun.aws.json as version. (make sure the Volume configuration is /var/run/)
+- Get the initialAdminPassword from the Logs (request Last 100 lines)
+
+# Add AWS ExternalId to Jenkins
+- First add the to the desired S3 bucket account a 'myJenkinsRole'.
+- Then add to the Jenkins container AWS account, to the 'ec2-instance-role' a policy to 'sts:AssumeRole' (so that it is allowed to assume the role)
+- Also make sure the source s3 bucket has a bucket policy to allow s3:PutObject to the myJenkinsRole (Principal > AWS)
