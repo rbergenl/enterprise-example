@@ -4,6 +4,7 @@ Team Shared Core
 # Shared components
 - Routing
 - Session Management
+- Events Bus
 
 # Guidelines
 - Do not use a framework, also no jQuery. Provide vanilla javascript components.
