@@ -8,3 +8,8 @@ Prerequisites:
 - Have `heroku` installed (account needed): https://devcenter.heroku.com/articles/heroku-cli
 - Have `aws` installed (account needed):
 - Have `firebase` installed (account needed):
+
+Knowledge:
+- Check `roadmap.sh`.
+- Check `http://atomicdesign.bradfrost.com/table-of-contents/`.
+- Check `https://medium.com/@tomsoderlund/micro-frontends-a-microservice-approach-to-front-end-web-development-f325ebdadc16`.

@@ -6,7 +6,7 @@ This project is initialised using: `$ npm init --yes`
 ## Getting Started
 Clone this repository
 ```
-$ git clone git@github.com:rbergenl/enterprise-example.git folder-name
+$ git clone git@github.com:rbergenl/enterprise-example.git [folder-name]
 ```
 Install node modules
 ```
@@ -39,19 +39,25 @@ $ npm start
 > Folders with an * are not source code but contains generated files
 
 ## Best Practices
-### Get instant feedback during development
-- Install plugins for your IDE to support `.editorconfig`,  `eslint` for javascript and ` cfn-lint` for cloudformation templates and `prettier` (or beautifier for html and javascript).
+### Ensure code quality with IDE plugins.
+- Install plugins/extensions for your IDE
+    - Linting and code styling for javascript, html and css: `prettier`, `.editorconfig` and `eslint`.
+    - Linting for CloudFormation templates: `cfn-lint`.
+    - Preview Markdown files: `markdown-preview`.
 ### Get feedback after each committed change
-- Setup a minimum pipeline which runs unit tests on every git push in feature branches.
+- Setup `prettier` to enforce code styling (checked in the continuous integration pipeline)
+- Setup a minimum pipeline which runs unit tests (Jest or Jasmine) on every git push in feature branches.
 - Unit Tests coverage should be above 80%
 - Do implement SonarQube as well for static code analysis, improving code quality and security.
+- If on github, enable automatic security fixes (mostly creating pull request to bump versions of dependencies)
+- Continuously ensure product quality by running a Lighthouse Audit (automated via npm). The factors PWA, accessibility and performance should be in green (>90)
 ### Keep a stable build
 - Use the default `npm outdated`, `npm update` and `npm audit` commands to update the dependencies and prevent security issues (use ` --depth 9999` to perform the command on deeper dependency tree). Might first need to remove the current `rm -r ./node_modules package-lock.json`. Also use `npm ls <package>` to see the current state for that package.
-### Deliver an optimised product
-- Run a Lighthouse Audit and make sure all factors are in green (add PWA and performance best practices)
 ### Use standards for consistency
 - Use the shared styling variables (`team-shared-styling`)
 - Implement a `dataLayer` to be consumed by analytics
+## Automate deployment to production
+- If deploying to AWS, use a cross-account deployment pipeline. Copy static files to a CDN or deploy a Stack update via CloudFormation.
 
 ## Contributing
 - Read the [`CONTRIBUTING.md`]('./CONTRIBUTING.md') file for the guidelines
