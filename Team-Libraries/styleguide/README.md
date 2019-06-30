@@ -9,11 +9,15 @@ Team Styling
   - Organise styling per theme.
   - Sass/Css variables.
   - HTML snippets (and examples) for components and page templates.
+  - Fonts
+  - Icons
 
 # Usage
 ## Sass variables
 ## CSS variables
 ## HTML snippets
+## Fonts
+## Icons
 ## Page Layout Guidelines
 
 # Publish to NPM
