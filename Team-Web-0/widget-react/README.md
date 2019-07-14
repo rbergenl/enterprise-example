@@ -1,7 +1,7 @@
 Team Widget React
 ---
 
-This project is initialised using: `$ npx create-create-app`
+This project is initialised using: `$ npm init create-app <name>`
 
 # Getting Started
 
