@@ -13,3 +13,6 @@ Knowledge:
 - Check `roadmap.sh`.
 - Check `http://atomicdesign.bradfrost.com/table-of-contents/`.
 - Check `https://medium.com/@tomsoderlund/micro-frontends-a-microservice-approach-to-front-end-web-development-f325ebdadc16`.
+
+Testing:
+- Run Angular App with `./node_modules/.bin/ng serve --proxy-config proxy.config.json --disable-host-check` and a server with `ngrok http 4100 --region=eu`. Then open the given URL with Sauce Labs live testing in IE.
